@@ -7,18 +7,18 @@ Proyek ESP32 motion display module merupakan custom PCB untuk ESP32 yang diinteg
 ## Cuplikan Schematic
 ![Skematik](images/schematic1.png)
 ## kode Arduino IDE
-'''cpp  
+```cpp  
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_ILI9341.h>
 #include <MPU6050.h>
 
-// Pin konfigurasi untuk TFT
+// Pin konfigurasi untuk LCD TFT
 #define TFT_CS     5
 #define TFT_DC     2
 #define TFT_RST    4
 
-// Inisialisasi objek TFT
+// Inisialisasi LCD TFT
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
 
 // Inisialisasi objek MPU6050
@@ -27,14 +27,14 @@ MPU6050 mpu;
 void setup() {
   Serial.begin(115200);
 
-  // Inisialisasi I2C untuk MPU6050
+  // Inisialisasi I2C MPU6050
   Wire.begin(21, 22); // SDA, SCL
   mpu.initialize();
 
   if (mpu.testConnection()) {
-    Serial.println("MPU6050 terkoneksi");
+    Serial.println("MPU6050 connect");
   } else {
-    Serial.println("Gagal koneksi ke MPU6050");
+    Serial.println("Gagal connect ke MPU6050");
     while (1); // Berhenti
   }
 
@@ -50,12 +50,12 @@ void loop() {
   int16_t ax, ay, az;
   mpu.getAcceleration(&ax, &ay, &az);
 
-  // Tampilkan di serial
+  // menampilkan di serial monitor
   Serial.print("AX: "); Serial.print(ax);
   Serial.print(" AY: "); Serial.print(ay);
   Serial.print(" AZ: "); Serial.println(az);
 
-  // Bersihkan dan tampilkan di layar
+  // membersihkan dan tampilkan di layar
   tft.fillScreen(ILI9341_BLACK);
   tft.setCursor(10, 20);
   tft.print("Accel X: "); tft.println(ax);
@@ -68,4 +68,3 @@ void loop() {
 
   delay(500);
 }  
-'''
