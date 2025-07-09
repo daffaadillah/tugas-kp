@@ -21,4 +21,12 @@ Proyek Design ESP32 merupakan pembuatan ESP32 dari awal, mulai dari penentuan ko
 -  Memungkinkan penggunaan USB-TTL eksternal untuk pemrograman via TX/RX.
 ### 5. Header pin
 -  Digunakan sebagai pin I/O eksternal. Bisa dijadikan input, output, PWM, SPI, I2C, UART, dll.
+
 ## Cuplikan Schematic
+![schmatic](images/schematic32.png)
+
+## Cuplikan LayOut PCB
+![layout](images/layoutesp32.png)
+
+## Cuplikan 3D View
+![3d](images/3d_esp32.png)
