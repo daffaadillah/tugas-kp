@@ -70,8 +70,7 @@ void loop() {
 }
 ```
 ## Prinsip kerja
-Prinsip kerja alat ini dimulai dari MPU6050 yang berfungsi sebagai sensor percepatan tiga sumbu (X, Y, Z). Sensor ini mendeteksi gerakan atau perubahan posisi, lalu mengirimkan data percepatan tersebut ke ESP32 melalui komunikasi I2C.
-ESP32 berperan sebagai pusat kontrol yang menerima, mengolah, dan menerjemahkan data percepatan dari sensor. Setelah data terbaca dan diproses, ESP32 mengirimkan hasilnya ke layar TFT LCD melalui komunikasi SPI. Tampilan pada layar diperbarui secara berkala untuk menunjukkan nilai percepatan terbaru dari ketiga sumbu. Dengan demikian, alat tersebut dapat digunakan untuk memantau gerakan atau orientasi secara real-time, yang divisualisasikan langsung melalui display yang mewakili nilai percepatan sumbu X, Y, dan Z.
+Prinsip kerja alat ini dimulai dari MPU6050 yang berfungsi sebagai sensor percepatan tiga sumbu (X, Y, Z). Sensor ini mendeteksi gerakan atau perubahan posisi, lalu mengirimkan data percepatan tersebut ke ESP32 melalui komunikasi I2C. ESP32 berperan sebagai pusat kontrol yang menerima, mengolah, dan menerjemahkan data percepatan dari sensor. Setelah data terbaca dan diproses, ESP32 mengirimkan hasilnya ke layar TFT LCD melalui komunikasi SPI. Tampilan pada layar diperbarui secara berkala untuk menunjukkan nilai percepatan terbaru dari ketiga sumbu. Dengan demikian, alat tersebut dapat digunakan untuk memantau gerakan atau orientasi secara real-time, yang divisualisasikan langsung melalui display yang mewakili nilai percepatan sumbu X, Y, dan Z.
 ## Cuplikan hasil custom PCB
-![3d custopm pcb](custompcb.png)
+![3d custopm pcb](images/custompcb.png)
 
