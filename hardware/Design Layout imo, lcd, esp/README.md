@@ -7,7 +7,7 @@ Proyek ESP32 motion display module merupakan custom PCB untuk ESP32 yang diinteg
 ## Cuplikan Schematic
 ![Skematik](images/schematic1.png)
 ## kode Arduino IDE
-'''cpp
+'''cpp  
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_ILI9341.h>
@@ -67,5 +67,5 @@ void loop() {
   tft.print("Accel Z: "); tft.println(az);
 
   delay(500);
-}
+}  
 '''
